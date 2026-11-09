@@ -1,0 +1,20 @@
+{
+  "name": "gpu-opencl-teaching-lab",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A reproducible CPU sequential vs CPU worker-thread vs OpenCL GPU bilateral-filter benchmark for teaching heterogeneous computing.",
+  "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "benchmark": "node benchmark.mjs",
+    "benchmark:light": "node benchmark.mjs --workload 1 --repeats 3 --warmups 1",
+    "benchmark:medium": "node benchmark.mjs --workload 3 --repeats 3 --warmups 1",
+    "benchmark:heavy": "node benchmark.mjs --workload 5 --repeats 3 --warmups 1",
+    "help": "node benchmark.mjs --help"
+  },
+  "optionalDependencies": {
+    "@node-3d/opencl": "^3.0.1",
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0"
+  }
+}
